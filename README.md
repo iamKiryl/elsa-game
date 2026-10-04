@@ -16,7 +16,7 @@ One room, one rabbit, a few platforms and three collectible star shards. Move, j
 - Vite: development server and production build.
 - ESLint, strict TypeScript and GitHub Actions: initial quality checks.
 
-Vitest and Playwright will be introduced alongside testable mechanics and a playable demo. A Python/FastAPI service for run results is an optional later milestone. Remotion is a separate future project.
+Vitest and Playwright will be introduced alongside testable mechanics and a playable demo. A Python/FastAPI service for run results is planned after the demo as a fullstack learning milestone. Remotion is a separate future project.
 
 ## Run locally
 
@@ -37,10 +37,14 @@ npm run preview
 
 ## Learning and development
 
-The game is implemented by the learner in small, reviewed changes. An assistant helps with explanations, review and project setup. Each milestone pairs a visible game feature with a focused engineering topic.
+The game is implemented by the learner in small, reviewed changes, with OpenAI Codex supporting explanations, planning, review and selected setup tasks. Learning covers the full delivery process: requirements, technical decisions, Git, CI/CD, testing, deployment and operating the application. These are learning goals, not a claim that every capability is already implemented.
+
+The initial repository and CI setup were prepared with Codex. Subsequent lessons include explaining that setup, inspecting proposed changes and verifying behavior. Decisions, AI assistance and evidence of completed work are recorded alongside the lessons.
 
 - [Implementation plan and first lesson](docs/PLAN.md) — Russian.
 - [Git, review and commit workflow](docs/WORKFLOW.md) — Russian.
+- [Engineering process, Codex workflow and first CI lesson](docs/ENGINEERING.md) — Russian.
+- [Learning log](docs/LEARNING_LOG.md) — completed work and questions still to practise.
 
 ## Artwork
 

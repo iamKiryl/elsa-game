@@ -13,3 +13,8 @@
 ## Decision to discuss
 
 <!-- One decision, tradeoff or question for review. -->
+
+## Learning and AI assistance
+
+<!-- What did you implement or decide? What did Codex help with, if anything?
+What evidence verified the result? Note anything you still need to understand. -->

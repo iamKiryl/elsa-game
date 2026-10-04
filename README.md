@@ -1,75 +1,47 @@
-# React + TypeScript + Vite
+# Elsa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small browser platformer about a white rabbit, built step by step with React, TypeScript and PixiJS.
 
-Currently, two official plugins are available:
+**Status:** project setup and learning roadmap. The app currently displays a heading; gameplay and the rabbit sprite are the next milestones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## First playable demo
 
-## React Compiler
+One room, one rabbit, a few platforms and three collectible star shards. Move, jump, collect the shards, reach the exit and restart. Once this works reliably, expand into short roguelite runs with one enemy type and a small selection of upgrades.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+- React 19: menus, instructions and the HUD.
+- TypeScript: game state, input and gameplay rules.
+- PixiJS 8: the scene, sprites and animation.
+- Vite: development server and production build.
+- ESLint, strict TypeScript and GitHub Actions: initial quality checks.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Vitest and Playwright will be introduced alongside testable mechanics and a playable demo. A Python/FastAPI service for run results is an optional later milestone. Remotion is a separate future project.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Run locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Use Node.js 22; the development version is recorded in `.nvmrc`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+npm ci
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+npm run lint
+npm run build
+npm run preview
 ```
+
+`build` checks TypeScript before creating `dist`. GitHub Actions runs lint and build on pushes and pull requests to `main`; it does not deploy the game.
+
+## Learning and development
+
+The game is implemented by the learner in small, reviewed changes. An assistant helps with explanations, review and project setup. Each milestone pairs a visible game feature with a focused engineering topic.
+
+- [Implementation plan and first lesson](docs/PLAN.md) — Russian.
+- [Git, review and commit workflow](docs/WORKFLOW.md) — Russian.
+
+## Artwork
+
+Elsa's visual reference is the owner's existing custom rabbit pet and GitHub avatar. The pet artwork is not included in this setup; record the source and any applicable usage terms when adding game assets. The current repository still contains unused Vite starter graphics.
